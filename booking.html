@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus Tours - Boyutlararası Seyahat</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/css/bootstrap.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <div class="container">
+        <a class="navbar-brand" href="/">NEXUS TOURS</a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class=""><i class="bi bi-list"></i></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a href="/" class="nav-link">Ana Sayfa</a>
+                </li>
+                <li class="nav-item">
+                    <a href="guides.html" class="nav-link">Boyut Rehberleri</a>
+                </li>
+                <li class="nav-item">
+                    <a href="booking.html" class="nav-link active">Rezervasyon</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<section class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col col-md-8">
+            <div class="card p-4">
+
+                <h2 class="mb-4 text-center display-6 text-primary">
+                    Yolculuk Biletinizi Ayırtın!
+                </h2>
+
+                <form action="" id="booking-form" novalidate>
+
+                    <div id="risk-alert" class="alert alert-danger d-none">
+
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="fullName" class="form-label">
+                            Yolcu Ad Soyad
+                        </label>
+
+                        <input type="text" class="form-control" id="fullName" required>
+
+                        <div class="invalid-feedback">
+                            Lütfen adınızı ve soyadınızı girin.
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="dimension" class="form-label">
+                            Gidilecek Boyut/Rota
+                        </label>
+
+                        <select name="" id="dimension" class="form-select" required>
+                            <option value="">Rota Seçiniz...</option>
+
+                            <option data-price="1500" data-risk="Low" value="orion">
+                                Orion Nebulası Kampı-$1500
+                            </option>
+
+                            <option data-price="3000" data-risk="Low" value="evren588">
+                                Evren 588 (Neo Tokyo)-$3000
+                            </option>
+
+                            <option data-price="5500" data-risk="High" value="gargaunta">
+                                Gargaunta Ufku(Tehlikeli)-$5500
+                            </option>
+                        </select>
+
+                        <div class="invalid-feedback">
+                            Lütfen bir rota seçiniz.
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="passenger-count" class="form-label">
+                            Yolcu Sayısı
+                        </label>
+
+                        <input type="text"
+                            class="form-control"
+                            id="passenger-count"
+                            min="1"
+                            max="10"
+                            value="1"
+                            required>
+
+                        <div class="invalid-feedback">
+                            Geçerli bir yolcu sayısı giriniz.(1-10)
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="travel-date" class="form-label">
+                            Gidiş Tarihi(Dünya zamanına göre)
+                        </label>
+
+                        <input type="date"
+                            name=""
+                            id="travel-date"
+                            class="form-control"
+                            required>
+
+                        <div class="invalid-feedback">
+                            Geçerli bir tarih giriniz.
+                        </div>
+                    </div>
+
+                    <div class="border py-2 px-4 rounded mb-3 d-flex justify-content-between align-items-center">
+                        <span class="fs-5">Toplam Tutar:</span>
+
+                        <span id="price-display" class="fs-3 text-success fw-bold">
+                            $0
+                        </span>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-lg w-100">
+                        Rezervasyonu Onayla
+                    </button>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="mt-auto py-4 mt-5 bg-white border-top">
+    <div class="container text-center">
+
+        <h5 class="text-primary fw-bold mb-3">
+            NEXUS TOURS
+        </h5>
+
+        <p>
+            Boyutlararası Güvenli Seyahat Acentesi &copy;2026
+        </p>
+
+        <div class="d-flex justify-content-center gap-3">
+            <a href="#" class="text-decoration-none text-muted">
+                Gizlilik Politikası
+            </a>
+
+            <a href="#" class="text-decoration-none text-muted">
+                Kullanım Şartları
+            </a>
+
+            <a href="#" class="text-decoration-none text-muted">
+                Evrensel Yasalar
+            </a>
+        </div>
+
+    </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/4.0.0/jquery.min.js"></script>
+<script src="js/booking.js"></script>
+
+</body>
+
+</html>
